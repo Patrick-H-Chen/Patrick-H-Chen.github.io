@@ -464,6 +464,76 @@ for the entire model with very little degradation in perplexity.
   <h2 class="year">2018</h2>
   <ol class="bibliography"><li><div class="row">
 
+
+
+  <div id="groupreduce18" class="col-sm-10">
+    
+      <div class="title">GroupReduce: Block-Wise Low-Rank Approximation for Neural Language Model Shrinking</div>
+      <div class="author">
+        
+        
+        
+              
+                <em>Patrick H. Chen</em>,  
+                Si Si,
+                Yang Li,
+                Ciprian Chelba
+                and Cho-jui, Hsieh
+              
+            
+          
+        
+      </div>
+
+      <div class="periodical">
+      
+        <em>In Advances in Neural Information Processing Systems</em>
+          
+        (<b>NeurIPS</b>),
+      
+      
+        2018
+        
+      </div>
+    
+
+    <div class="links">
+    
+      [<a class="abstract button" role="button">Abstract</a>]
+      <!--[<a href="https://ieeexplore.ieee.org/iel7/4234/5534602/08624521.pdf" target="_blank">PDF</a>] -->
+    
+    </div>
+
+    <!-- Hidden abstract block -->
+    
+    <div class="abstract hidden">
+    <p>
+Model compression is essential for serving large deep neural nets on devices with
+limited resources or applications that require real-time responses. As a case study, a
+neural language model usually consists of one or more recurrent layers sandwiched
+between an embedding layer used for representing input tokens and a softmax
+layer for generating output tokens. For problems with a very large vocabulary
+size, the embedding and the softmax matrices can account for more than half of
+the model size. For instance, the bigLSTM model achieves great performance
+on the One-Billion-Word (OBW) dataset with around 800k vocabulary, and its
+word embedding and softmax matrices use more than 6GBytes space, and are
+responsible for over 90% of the model parameters. In this paper, we propose
+GroupReduce, a novel compression method for neural language models, based
+on vocabulary-partition (block) based low-rank matrix approximation and the
+inherent frequency distribution of tokens (the power-law distribution of words).
+The experimental results show our method can significantly outperform traditional
+compression methods such as low-rank approximation and pruning. On the OBW
+dataset, our method achieved 6.6 times compression rate for the embedding and
+softmax matrices, and when combined with quantization, our method can achieve
+26 times compression rate, which translates to a factor of 12.8 times compression
+for the entire model with very little degradation in perplexity.
+</p>
+
+    </div>
+    
+  </div>
+
+
 </div>
 </li></ol>
 
