@@ -154,113 +154,16 @@
     
       <div class="title">Augment with Care: Contrastive Learning for the Boolean Satisfiability Problem</div>
       <div class="author">
-        
-        
-        
-          
-
-          
-          
-          
-          
-
-          
-          
-          
-            
-              
-                
                   Haonan Duan*,
-                
-              
-            
-          
-        
-          
-
-          
-          
-          
-          
-
-          
-          
-          
-            
-              
-                
                   Pashootan Vaezipoor*,
-                
-              
-            
-          
-        
-          
-
-          
-          
-          
-          
-
-          
-          
-          
-            
-              
-                
                   Max B Paulus,
-                
-              
-            
-          
-        
-          
-
-          
-          
-          
-          
-
-          
-          
-          
-            
-              
                 <em>Yangjun Ruan</em>,  
-              
-            
-          
-        
-          
-
-          
-          
-          
-          
-
-          
-          
-          
-            
-              
-                
                   and Chris J Maddison
-                
-              
-            
-          
-        
       </div>
-
       <div class="periodical">
-      
-        
         <em>ArXiv Preprint</em>,
-        
-      
       
         2022
-      
       
       </div>
     
@@ -268,22 +171,9 @@
     <div class="links">
     
       [<a class="abstract button" role="button">Abstract</a>]
-    
-    
-    
-    
       
       [<a href="https://arxiv.org/pdf/2202.08396.pdf" target="_blank">PDF</a>]
       
-    
-    
-    
-    
-    
-    
-    
-    
-    </div>
 
     <!-- Hidden abstract block -->
     
@@ -307,20 +197,6 @@
     
       <div class="title">Optimal Representations for Covariate Shift</div>
       <div class="author">
-        
-        
-        
-          
-
-          
-          
-          
-          
-
-          
-          
-          
-            
               
                 <em>Yangjun Ruan*</em>,  
               
@@ -427,16 +303,6 @@
     
       <div class="title">Improving Lossless Compression Rates via Monte Carlo Bits-Back Coding</div>
       <div class="author">
-        
-        
-        
-          
-
-          
-          
-          
-          
-
           
           
           
@@ -1004,64 +870,19 @@
   
   </div> -->
 
-  <div id="ren2019data" class="col-sm-10">
+  <div id="groupreduce18" class="col-sm-10">
     
-      <div class="title">Data transmission in mobile edge networks: Whether and where to compress?</div>
+      <div class="title">GroupReduce: Block-Wise Low-Rank Approximation for Neural Language Model Shrinking</div>
       <div class="author">
         
         
         
-          
-
-          
-          
-          
-          
-
-          
-          
-          
-            
               
-                
-                  Jinke Ren*,
-                
-              
-            
-          
-        
-          
-
-          
-          
-          
-          
-
-          
-          
-          
-            
-              
-                <em>Yangjun Ruan*</em>,  
-              
-            
-          
-        
-          
-
-          
-          
-          
-          
-
-          
-          
-          
-            
-              
-                
-                  and Guanding Yu
-                
+                <em>Patrick H. Chen</em>,  
+                Si Si,
+                Yang Li,
+                Ciprian Chelba
+                and Cho-jui, Hsieh
               
             
           
@@ -1070,41 +891,48 @@
 
       <div class="periodical">
       
+        <em>In Advances in Neural Information Processing Systems</em>
+          
+        (<b>NeurIPS</b>),
+      
+      
+        2018
         
-        <em>IEEE Communications Letters</em>,
-        
-      
-      
-        2019
-      
-      
       </div>
     
 
     <div class="links">
     
       [<a class="abstract button" role="button">Abstract</a>]
-    
-    
-    
-    
-      
-      [<a href="https://ieeexplore.ieee.org/iel7/4234/5534602/08624521.pdf" target="_blank">PDF</a>]
-      
-    
-    
-    
-    
-    
-    
-    
+      <!--[<a href="https://ieeexplore.ieee.org/iel7/4234/5534602/08624521.pdf" target="_blank">PDF</a>] -->
     
     </div>
 
     <!-- Hidden abstract block -->
     
     <div class="abstract hidden">
-      <p>Future multimedia communication systems aim to support high-rate data transmission and deliver millisecond-scale latency performance. To achieve this goal, this letter revisits the multimedia compression strategy in the framework of mobile edge computing from the perspective of latency minimization. The uniqueness of this letter is that the delay caused by both data compression/decompression and data transmission are considered. According to where to compress and decompress data, three different schemes are investigated and the end-to-end latency of each scheme is analyzed. We first present some comparative theoretical results on the latency performance of different schemes for given compression ratio. Then, we prove that the optimal compression ratio to minimize the end-to-end latency has a binary structure. This initial work reveals that it is optimal to transmit without compression in the case that the communication capacity is sufficiently large.</p>
+    <p>
+odel compression is essential for serving large deep neural nets on devices with
+limited resources or applications that require real-time responses. As a case study, a
+neural language model usually consists of one or more recurrent layers sandwiched
+between an embedding layer used for representing input tokens and a softmax
+layer for generating output tokens. For problems with a very large vocabulary
+size, the embedding and the softmax matrices can account for more than half of
+the model size. For instance, the bigLSTM model achieves great performance
+on the One-Billion-Word (OBW) dataset with around 800k vocabulary, and its
+word embedding and softmax matrices use more than 6GBytes space, and are
+responsible for over 90% of the model parameters. In this paper, we propose
+GroupReduce, a novel compression method for neural language models, based
+on vocabulary-partition (block) based low-rank matrix approximation and the
+inherent frequency distribution of tokens (the power-law distribution of words).
+The experimental results show our method can significantly outperform traditional
+compression methods such as low-rank approximation and pruning. On the OBW
+dataset, our method achieved 6.6 times compression rate for the embedding and
+softmax matrices, and when combined with quantization, our method can achieve
+26 times compression rate, which translates to a factor of 12.8 times compression
+for the entire model with very little degradation in perplexity.
+</p>
+
     </div>
     
   </div>
