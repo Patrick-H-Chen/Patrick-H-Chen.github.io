@@ -342,6 +342,56 @@ performance on downstream tasks.
 
 
 
+  <ol class="bibliography"><li><div class="row">
+  <div id="screen19" class="col-sm-10">
+      <div class="title"></div>
+      <div class="author">
+                <em>Patrick H. Chen</em>,  
+                Si Si,
+                Sanjiv Kumar,
+                Yang Li, 
+                and Cho-jui, Hsieh,
+      </div>
+      <div class="periodical">
+      
+        <em>In International Conference on Learning Representations</em>
+          
+        (<b>ICLR</b>),
+      
+        2019
+      </div>
+        
+    <div class="links">
+    
+      [<a class="abstract button" role="button">Abstract</a>]
+      [<a href="https://openreview.net/pdf?id=ByeMB3Act7" ftarget="_blank">PDF</a>]
+    
+    </div>
+
+    <div class="abstract hidden">
+    <p>
+Neural language models have been widely used in various NLP tasks, including
+machine translation, next word prediction and conversational agents. However, it
+is challenging to deploy these models on mobile devices due to their slow prediction speed, where the bottleneck is to compute top candidates in the softmax
+layer. In this paper, we introduce a novel softmax layer approximation algorithm
+by exploiting the clustering structure of context vectors. Our algorithm uses a
+light-weight screening model to predict a much smaller set of candidate words
+based on the given context, and then conducts an exact softmax only within that
+subset. Training such a procedure end-to-end is challenging as traditional clustering methods are discrete and non-differentiable, and thus unable to be used with
+back-propagation in the training process. Using the Gumbel softmax, we are able
+to train the screening model end-to-end on the training set to exploit data distribution. The algorithm achieves an order of magnitude faster inference than the
+original softmax layer for predicting top-k words in various tasks such as beam
+search in machine translation or next words prediction. For example, for machine translation task on German to English dataset with around 25K vocabulary,
+we can achieve 20.4 times speed up with 98.9% precision@1 and 99.3% precision@5 with the original softmax layer prediction, while state-of-the-art (Zhang
+et al., 2018) only achieves 6.7x speedup with 98.7% precision@1 and 98.1% precision@5 for the same task.
+</p>
+
+    </div>
+
+
+   </div> 
+  </div>
+  </li></ol>
 
 
   <h2>Machine Learning Model Compression</h2>
@@ -407,7 +457,7 @@ on various natural language inference tasks.
   <div id="mulcode19" class="col-sm-10">
       <div class="title">MulCode: A Multiplicative Multi-way Model for Compressing Neural Language Model</div>
       <div class="author">
-                Yukon, Ma*
+                Yukun, Ma*
                 <em>Patrick H. Chen*</em>,  
                 and Cho-jui, Hsieh
       </div>
@@ -592,7 +642,7 @@ In this paper, we propose a new method to over-come catastrophic forgetting by a
     
       <div class="title">Sign-OPT: A Query-Efficient Hard-label Adversarial Attack</div>
       <div class="author">
-          Minhao Cheng1, Simranjit Singh1*, <em> Patrick H. Chen </em>, Pin-Yu Chen, Sijia Liu and Cho-Jui Hsieh
+          Minhao Cheng*, Simranjit Singh*, <em> Patrick H. Chen </em>, Pin-Yu Chen, Sijia Liu and Cho-Jui Hsieh
       </div>
 
       <div class="periodical">
