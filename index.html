@@ -175,7 +175,7 @@
 
     <div class="container mt-5">
 			<!-- <h2>Home &nbsp; &nbsp; <a href="./pubs/index.html">Publications</a></h2> -->
-		        <h1>Chris J. Maddison</h1>
+		        <h1>Patrick H. Chen</h1>
 	 		<div class="row markdown-body">
 				<div class="column-picture left">
 		 			<img class="portrait-circular" src="pic/PC.png">
@@ -194,9 +194,7 @@
 				</div>
 			</div>
 
-			<h2>Research</h2>
 
-			<p>My current research focsed on Efficient Machine Learning (EML). The goal of EML is to achieve a smaller model with fast inference speed on all devices. This includes studies of compressing machine learning models,approximating model inference operations, or acheving both simultaneoursly. In addition to EML, I am also keen on exploring fundamental problems of Machine Learning such as adversarial robustness or catastrophic forgetting. </p>
 
 					<p><b>Representation learning</b> &nbsp;&nbsp;&nbsp;&nbsp; How we represent data affects how effectively we process and understand it. I am interested in learning useful and robust representations, with a particular interest in techniques that learn representations from pretext tasks. In recent work, we showed how to <a href="https://arxiv.org/abs/2106.10800">learn compressed representations of data</a> with performance guarantees on a large, possibly infinite, set of downstream tasks.
 					</p>
@@ -223,7 +221,7 @@
     <div class="clearfix">
       <h2 id="bio">Bio</h2>
 <hr />
-<p>I am a Ph.D. student in Computer Science at UCLA, supervised by <a href="http://web.cs.ucla.edu/~chohsieh/index.html#about">Cho-Jui Hsieh</a>. I obtained my Bachelor degree in Electrical Engineering and History from National Taiwan University. Before starting Ph.D. journery, I worked as a Research Assistant supervised by <a href="https://sites.google.com/site/shenshyang/home">Shen-Shyang Ho<  ing student at <a href="https://www.cs.ucla.edu/">UCLA</a>, where I worked with </p>
+<p>I am a Ph.D. student in Computer Science at UCLA, supervised by <a href="http://web.cs.ucla.edu/~chohsieh/index.html#about">Cho-Jui Hsieh</a>. I obtained my Bachelor degree in Electrical Engineering and History from National Taiwan University. Before starting my Ph.D. journery, I worked with <a href="https://sites.google.com/site/shenshyang/home">Shen-Shyang Ho</a> as a Research Assistant at Nanyang Technological University</p>
 
 <p><br /></p>
 
@@ -239,6 +237,11 @@
 <h4 id="selected-publications-full-list"><strong>Selected Publications</strong> <a href="publication.html">[Full List]</a></h4>
 <hr />
 <p>* below denotes equal contribution</p>
+
+
+
+
+
 <div class="publications">
   <ol class="bibliography"><li><div class="row">
   <!-- <div class="col-sm-2 abbr">
@@ -249,503 +252,68 @@
   
   </div> -->
 
-  <div id="ruan2022optdom" class="col-sm-10">
+
+
+  <div id="groupreduce18" class="col-sm-10">
     
-      <div class="title">Optimal Representations for Covariate Shift</div>
+      <div class="title">GroupReduce: Block-Wise Low-Rank Approximation for Neural Language Model Shrinking</div>
       <div class="author">
         
-        
-        
-          
-
-          
-          
-          
-          
-
-          
-          
-          
-            
-              
-                <em>Yangjun Ruan*</em>,  
-              
-            
-          
-        
-          
-
-          
-          
-          
-          
-
-          
-          
-          
-            
-              
-                
-                  Yann Dubois*,
-                
-              
-            
-          
-        
-          
-
-          
-          
-          
-          
-
-          
-          
-          
-            
-              
-                
-                  and Chris J Maddison
-                
-              
-            
-          
-        
+                <em>Patrick H. Chen</em>,  
+                Si Si,
+                Yang Li,
+                Ciprian Chelba
+                and Cho-jui, Hsieh
       </div>
 
       <div class="periodical">
       
+        <em>In Advances in Neural Information Processing Systems</em>
           
-            <em>In International Conference on Learning Representations</em>
-          
-        (<b>ICLR</b>),
+        (<b>NeurIPS</b>),
       
       
-        2022
-      
-      
+        2018
+        
       </div>
     
 
     <div class="links">
     
       [<a class="abstract button" role="button">Abstract</a>]
-    
-    
-    
-    
-      
-      [<a href="https://arxiv.org/pdf/2201.00057.pdf" target="_blank">PDF</a>]
-      
-    
-    
-    
-    
-      [<a href="https://github.com/ryoungj/optdom" target="_blank">Code</a>]
-    
-    
-    
-    
-    
+      [<a href="https://proceedings.neurips.cc/paper/2018/file/a2b8a85a29b2d64ad6f47275bf1360c6-Paper.pdf" target="_blank">PDF</a>] 
     </div>
 
     <!-- Hidden abstract block -->
     
     <div class="abstract hidden">
-      <p>Machine learning systems often experience a distribution shift between training and testing. In this paper, we introduce a simple variational objective whose optima are \textitexactly the set of \textitall representations on which risk minimizers are guaranteed to be robust to any distribution shift that preserves the Bayes predictor, e.g., covariate shifts. Our objective has two components. First, a representation must remain discriminative for the task, i.e., some predictor must be able to simultaneously minimize the source and target risk. Second, the representation’s marginal support needs to be the same across source and target. We make this practical by designing self-supervised learning methods that only use unlabelled data and augmentations to train robust representations. Our objectives achieve state-of-the-art results on DomainBed, and give insights into the robustness of recent methods, such as CLIP.</p>
+    <p>
+Model compression is essential for serving large deep neural nets on devices with
+limited resources or applications that require real-time responses. As a case study, a
+neural language model usually consists of one or more recurrent layers sandwiched
+between an embedding layer used for representing input tokens and a softmax
+layer for generating output tokens. For problems with a very large vocabulary
+size, the embedding and the softmax matrices can account for more than half of
+the model size. For instance, the bigLSTM model achieves great performance
+on the One-Billion-Word (OBW) dataset with around 800k vocabulary, and its
+word embedding and softmax matrices use more than 6GBytes space, and are
+responsible for over 90% of the model parameters. In this paper, we propose
+GroupReduce, a novel compression method for neural language models, based
+on vocabulary-partition (block) based low-rank matrix approximation and the
+inherent frequency distribution of tokens (the power-law distribution of words).
+The experimental results show our method can significantly outperform traditional
+compression methods such as low-rank approximation and pruning. On the OBW
+
+
+</p>
+
     </div>
     
   </div>
-</div>
-</li>
-<li><div class="row">
-  <!-- <div class="col-sm-2 abbr">
-  
-    
-    <abbr class="badge">ICML</abbr>
-    
-  
-  </div> -->
 
-  <div id="ruan2021mcbits" class="col-sm-10">
-    
-      <div class="title">Improving Lossless Compression Rates via Monte Carlo Bits-Back Coding</div>
-      <div class="author">
-        
-        
-        
-          
 
-          
-          
-          
-          
-
-          
-          
-          
-            
-              
-                <em>Yangjun Ruan*</em>,  
-              
-            
-          
-        
-          
-
-          
-          
-          
-          
-
-          
-          
-          
-            
-              
-                
-                  Karen Ullrich*,
-                
-              
-            
-          
-        
-          
-
-          
-          
-          
-          
-
-          
-          
-          
-            
-              
-                
-                  Daniel Severo*,
-                
-              
-            
-          
-        
-          
-
-          
-          
-          
-          
-
-          
-          
-          
-            
-              
-                
-                  James Townsend,
-                
-              
-            
-          
-        
-          
-
-          
-          
-          
-          
-
-          
-          
-          
-            
-              
-                
-                  Ashish Khisti,
-                
-              
-            
-          
-        
-          
-
-          
-          
-          
-          
-
-          
-          
-          
-            
-              
-                
-                  Arnaud Doucet,
-                
-              
-            
-          
-        
-          
-
-          
-          
-          
-          
-
-          
-          
-          
-            
-              
-                
-                  Alireza Makhzani,
-                
-              
-            
-          
-        
-          
-
-          
-          
-          
-          
-
-          
-          
-          
-            
-              
-                
-                  and Chris J Maddison
-                
-              
-            
-          
-        
-      </div>
-
-      <div class="periodical">
-      
-          
-            <em>In International Conference on Machine Learning</em>
-          
-        (<b>ICML</b>),
-      
-      
-        2021
-      
-      
-        <b style="color:#B71C1C;">[Long talk]</b>
-      
-      </div>
-    
-
-    <div class="links">
-    
-      [<a class="abstract button" role="button">Abstract</a>]
-    
-    
-    
-    
-      
-      [<a href="https://arxiv.org/pdf/2102.11086.pdf" target="_blank">PDF</a>]
-      
-    
-    
-    
-    
-      [<a href="https://github.com/ryoungj/mcbits" target="_blank">Code</a>]
-    
-    
-      
-      [<a href="/~yjruan/assets/pdf/poster/McBits_poster.pdf" target="_blank">Poster</a>]
-      
-    
-    
-      
-      [<a href="/~yjruan/assets/pdf/slides/McBits_slides.pdf" target="_blank">Slides</a>]
-      
-    
-    
-    
-    </div>
-
-    <!-- Hidden abstract block -->
-    
-    <div class="abstract hidden">
-      <p>Latent variable models have been successfully applied in lossless compression with the bits-back coding algorithm. However, bits-back suffers from an increase in the bitrate equal to the KL divergence between the approximate posterior and the true posterior. In this paper, we show how to remove this gap asymptotically by deriving bits-back coding algorithms from tighter variational bounds. The key idea is to exploit extended space representations of Monte Carlo estimators of the marginal likelihood. Naively applied, our schemes would require more initial bits than the standard bits-back coder, but we show how to drastically reduce this additional cost with couplings in the latent space. When parallel architectures can be exploited, our coders can achieve better rates than bits-back with little additional cost. We demonstrate improved lossless compression rates in a variety of settings, especially in out-of-distribution or sequential data compression.</p>
-    </div>
-    
-  </div>
-</div>
-</li>
-<li><div class="row">
-  <!-- <div class="col-sm-2 abbr">
-  
-    
-    <abbr class="badge">ICLR</abbr>
-    
-  
-  </div> -->
-
-  <div id="ruan2020zol2l" class="col-sm-10">
-    
-      <div class="title">Learning to Learn by Zeroth-Order Oracle</div>
-      <div class="author">
-        
-        
-        
-          
-
-          
-          
-          
-          
-
-          
-          
-          
-            
-              
-                <em>Yangjun Ruan</em>,  
-              
-            
-          
-        
-          
-
-          
-          
-          
-          
-
-          
-          
-          
-            
-              
-                
-                  Yuanhao Xiong,
-                
-              
-            
-          
-        
-          
-
-          
-          
-          
-          
-
-          
-          
-          
-            
-              
-                
-                  Sashank Reddi,
-                
-              
-            
-          
-        
-          
-
-          
-          
-          
-          
-
-          
-          
-          
-            
-              
-                
-                  Sanjiv Kumar,
-                
-              
-            
-          
-        
-          
-
-          
-          
-          
-          
-
-          
-          
-          
-            
-              
-                
-                  and Cho-Jui Hsieh
-                
-              
-            
-          
-        
-      </div>
-
-      <div class="periodical">
-      
-          
-            <em>In International Conference on Learning Representations</em>
-          
-        (<b>ICLR</b>),
-      
-      
-        2020
-      
-      
-      </div>
-    
-
-    <div class="links">
-    
-      [<a class="abstract button" role="button">Abstract</a>]
-    
-    
-    
-    
-      
-      [<a href="https://openreview.net/pdf?id=ryxz8CVYDH" target="_blank">PDF</a>]
-      
-    
-    
-    
-    
-      [<a href="https://github.com/ryoungj/ZO-L2L" target="_blank">Code</a>]
-    
-    
-    
-      
-      [<a href="/~yjruan/assets/pdf/slides/ZO-L2L_slides.pdf" target="_blank">Slides</a>]
-      
-    
-    
-    
-    </div>
-
-    <!-- Hidden abstract block -->
-    
-    <div class="abstract hidden">
-      <p>In the learning to learn (L2L) framework, we cast the design of optimization algorithms as a machine learning problem and use deep neural networks to learn the update rules. In this paper, we extend the L2L framework to zeroth-order (ZO) optimization setting, where no explicit gradient information is available. Our learned optimizer, modeled as recurrent neural network (RNN), first approximates gradient by ZO gradient estimator and then produces parameter update utilizing the knowledge of previous iterations. To reduce high variance effect due to ZO gradient estimator, we further introduce another RNN to learn the Gaussian sampling rule and dynamically guide the query direction sampling. Our learned optimizer outperforms hand-designed algorithms in terms of convergence rate and final solution on both synthetic and practical ZO optimization tasks (in particular, the black-box adversarial attack task, which is one of the most widely used tasks of ZO optimization). We finally conduct extensive analytical experiments to demonstrate the effectiveness of our proposed optimizer.</p>
-    </div>
-    
-  </div>
 </div>
 </li></ol>
-</div>
-
-
-
-    </div>
 
     
 
