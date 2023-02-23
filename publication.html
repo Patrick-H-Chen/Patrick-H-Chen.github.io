@@ -162,6 +162,100 @@
   <br/>
 
 
+
+  <ol class="bibliography"><li><div class="row">
+  <div id="finger23" class="col-sm-10">
+      <div class="title">FINGER: Fast Inference for Graph-based Approximate Nearest Neighbor Search</div>
+
+      <div class="author">
+                <em>Patrick H. Chen</em>,  
+                Wei-cheng Chang,
+                Jyun-yu Jiang,
+                Hsiang-fu Yu,
+                and Cho-jui, Hsieh
+      </div>
+      <div class="periodical">
+
+        <em>To Appear In International World Wide Web Conference</em>
+          
+        (<b>WWW</b>),
+      
+        2023
+      </div>
+        
+    <div class="links">
+    
+      [<a class="abstract button" role="button">Abstract</a>]
+      [<a href="" ftarget="_blank">PDF</a>]
+    
+    </div>
+
+    <div class="abstract hidden">
+    <p>
+Approximate K-Nearest Neighbor Search (AKNNS) has now become
+ubiquitous in modern applications, such as a fast search procedure
+with two-tower deep learning models. Graph-based methods for
+AKNNS in particular have received great attention due to their
+superior performance. These methods rely on greedy graph search
+to traverse the data points as embedding vectors in a database. Under this greedy search scheme, we make a key observation: many
+distance computations do not influence search updates so that these
+computations can be approximated without hurting performance.
+As a result, we propose FINGER, a fast inference method for efficient graph search in AKNNS. FINGER approximates the distance
+function by estimating angles between neighboring residual vectors.
+The approximated distance can be used to bypass unnecessary computations for faster searches. Empirically, when it comes to speeding
+up the inference of HNSW, which is one of the most popular graph-based AKNNS methods, FINGER significantly outperforms existing
+acceleration approaches and conventional libraries by 20% to 60% across different benchmark datasets.
+    </p>
+
+    </div>
+
+
+   </div> 
+  </div>
+  </li></ol>
+
+  <ol class="bibliography"><li><div class="row">
+  <div id="elias22" class="col-sm-10">
+      <div class="title">ELIAS: End-to-end Learning to Index and Search in Large Output Spaces</div>
+
+      <div class="author">
+                Nilesh Gupta,
+                <em>Patrick H. Chen</em>,  
+                Hsiang-fu Yu,
+                Cho-jui, Hsieh,
+                and Inderjit S. Dhillon
+      </div>
+      <div class="periodical">
+      
+        <em>In Advances in Neural Information Processing Systems</em>
+          
+        (<b>NeurIPS</b>),
+      
+        2022
+      </div>
+        
+    <div class="links">
+    
+      [<a class="abstract button" role="button">Abstract</a>]
+      [<a href="https://openreview.net/pdf?id=RF5Lb6NaZp" ftarget="_blank">PDF</a>]
+    
+    </div>
+
+    <div class="abstract hidden">
+    <p>
+Extreme multi-label classification (XMC) is a popular framework for solving many real-world problems that require accurate prediction from a very large number of potential output choices. A popular approach for dealing with the large label space is to arrange the labels into a shallow tree-based index and then learn an ML model to efficiently search this index via beam search. Existing methods initialize the tree index by clustering the label space into a few mutually exclusive clusters based on pre-defined features and keep it fixed throughout the training procedure. This approach results in a sub-optimal indexing structure over the label space and limits the search performance to the quality of choices made during the initialization of the index. In this paper, we propose a novel method ELIAS which relaxes the tree-based index to a specialized weighted graph-based index which is learned end-to-end with the final task objective. More specifically, ELIAS models the discrete cluster-to-label assignments in the existing tree-based index as soft learnable parameters that are learned jointly with the rest of the ML model. ELIAS achieves state-of-the-art performance on several large-scale extreme classification benchmarks with millions of labels. In particular, ELIAS can be up to 2.5% better at precision@1 and up to 4% better at recall@100 than existing XMC methods. A PyTorch implementation of ELIAS along with other resources is available at https://github.com/nilesh2797/ELIAS.
+</p>
+
+    </div>
+
+
+   </div> 
+  </div>
+  </li></ol>
+
+
+
+
   <ol class="bibliography"><li><div class="row">
   <div id="drone21" class="col-sm-10">
       <div class="title">DRONE: Data-aware Low-rank Compression for Large NLP Models</div>
