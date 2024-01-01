@@ -163,12 +163,157 @@
 
 
 
-  <h2>Fast Machine Learning Inference</h2>
+  <h2>Fundamental</h2>
   <hr/>
   <br/>
 
 
+  <ol class="bibliography"><li><div class="row">
+    <div id="signopt20" class="col-sm-10">
+      
+        <div class="title">Sign-OPT: A Query-Efficient Hard-label Adversarial Attack</div>
+        <div class="author">
+            Minhao Cheng*, Simranjit Singh*, <em> Patrick H. Chen </em>, Pin-Yu Chen, Sijia Liu and Cho-Jui Hsieh
+        </div>
+  
+        <div class="periodical">
+        
+          <em>In International Conference on Learning Representations</em>
+            
+          (<b>ICLR</b>),
+        
+          2020
+          
+        </div>
+      
+  
+      <div class="links">
+      
+        [<a class="abstract button" role="button">Abstract</a>]
+        <!--[<a href="https://ieeexplore.ieee.org/iel7/4234/5534602/08624521.pdf" target="_blank">PDF</a>] -->
+      
+        [<a href="https://arxiv.org/pdf/1909.10773.pdf" target="_blank">PDF</a>]
+  
+       <!-- [<a href="https://github.com/ryoungj/optdom" target="_blank">Code</a>] -->
+      </div>
+      
+      
+      
+      
+  
+      <!-- Hidden abstract block -->
+      
+      <div class="abstract hidden">
+      <p>
+  We study the most practical problem setup for evaluating adversarial robustness
+  of a machine learning system with limited access: the hard-label black-box attack setting for generating adversarial examples, where limited model queries
+  are allowed and only the decision is provided to a queried data input. Several
+  algorithms have been proposed for this problem but they typically require huge
+  amount (>20,000) of queries for attacking one example. Among them, one of
+  the state-of-the-art approaches (Cheng et al., 2019) showed that hard-label attack
+  can be modeled as an optimization problem where the objective function can be
+  evaluated by binary search with additional model queries, thereby a zeroth order optimization algorithm can be applied. In this paper, we adopt the same optimization
+  formulation but propose to directly estimate the sign of gradient at any direction
+  instead of the gradient itself, which enjoys the benefit of single query. Using
+  this single query oracle for retrieving sign of directional derivative, we develop
+  a novel query-efficient Sign-OPT approach for hard-label black-box attack. We
+  provide a convergence analysis of the new algorithm and conduct experiments
+  on several models on MNIST, CIFAR-10 and ImageNet. We find that Sign-OPT
+  attack consistently requires 5× to 10× fewer queries when compared to the current
+  state-of-the-art approaches, and usually converges to an adversarial example with
+  smaller perturbation.
+  </p>
+  
+  
+  
+      </div>
+      
+    </div>
+  
+  
+  </div>
+  </li></ol>
+  
 
+
+
+
+
+
+
+
+
+  <h2>Uncertainty</h2>
+  <hr/>
+  <br/>
+
+  <ol class="bibliography"><li><div class="row">
+    <div id="forgetting21" class="col-sm-10">
+      
+        <div class="title">Overcoming Catastrophic Forgetting by Bayesian Generative Regularization</div>
+        <div class="author">
+                  <em>Patrick H. Chen</em>,  
+                  Wei Wei,
+                  Cho-jui, Hsieh,
+                  and Bo Dai
+        </div>
+  
+        <div class="periodical">
+        
+          <em>In Conference of Machine Learning</em>
+            
+          (<b>ICML</b>),
+        
+        
+          2021
+          
+        </div>
+      
+  
+      <div class="links">
+      
+        [<a class="abstract button" role="button">Abstract</a>]
+        <!--[<a href="https://ieeexplore.ieee.org/iel7/4234/5534602/08624521.pdf" target="_blank">PDF</a>] -->
+      
+        [<a href="http://proceedings.mlr.press/v139/chen21v/chen21v.pdf" target="_blank">PDF</a>]
+        [<a href="https://github.com/Patrick-H-Chen/EBM-Forget" target=_blank">Code</a>]
+  
+       <!-- [<a href="https://github.com/ryoungj/optdom" target="_blank">Code</a>] -->
+      </div>
+      
+      
+      
+      
+  
+      <!-- Hidden abstract block -->
+      
+      <div class="abstract hidden">
+      <p>
+  In this paper, we propose a new method to over-come catastrophic forgetting by adding generative regularization to Bayesian inference frame-work. Bayesian method provides a general frame-work for continual learning. We could further construct a generative regularization term for all given classification models by leveraging energy-based models and Langevin dynamic sampling to enrich the features learned in each task. By combining discriminative and generative loss together, we empirically show that the proposed method outperforms state-of-the-art methods on a variety of tasks, avoiding catastrophic forgetting in continual learning. In particular, the proposed method outperforms baseline methods over 15%on the Fashion-MNIST dataset and 10%on the CUB dataset.
+  </p>
+  
+  
+  
+      </div>
+      
+    </div>
+  
+  
+  </div>
+  </li></ol>
+  
+  
+  
+
+<!--
+    
+  </div>
+-->
+
+
+  <h2>Efficiency </h2>
+  <hr/>
+  <br/>
   <ol class="bibliography"><li><div class="row">
   <div id="finger23" class="col-sm-10">
       <div class="title">FINGER: Fast Inference for Graph-based Approximate Nearest Neighbor Search</div>
@@ -221,105 +366,158 @@ acceleration approaches and conventional libraries by 20% to 60% across differen
   </div>
   </li></ol>
 
-  <ol class="bibliography"><li><div class="row">
-  <div id="elias22" class="col-sm-10">
-      <div class="title">ELIAS: End-to-end Learning to Index and Search in Large Output Spaces</div>
 
-      <div class="author">
-                Nilesh Gupta,
-                <em>Patrick H. Chen</em>,  
-                Hsiang-fu Yu,
-                Cho-jui, Hsieh,
-                and Inderjit S. Dhillon
-      </div>
-      <div class="periodical">
-      
-        <em>In Advances in Neural Information Processing Systems</em>
-          
-        (<b>NeurIPS</b>),
-      
-        2022
-      </div>
+
+  <ol class="bibliography"><li><div class="row">
+    <div id="elias22" class="col-sm-10">
+        <div class="title">ELIAS: End-to-end Learning to Index and Search in Large Output Spaces</div>
+  
+        <div class="author">
+                  Nilesh Gupta,
+                  <em>Patrick H. Chen</em>,  
+                  Hsiang-fu Yu,
+                  Cho-jui, Hsieh,
+                  and Inderjit S. Dhillon
+        </div>
+        <div class="periodical">
         
-    <div class="links">
-    
-      [<a class="abstract button" role="button">Abstract</a>]
-      [<a href="https://openreview.net/pdf?id=RF5Lb6NaZp" ftarget="_blank">PDF</a>]
-      [<a href="https://github.com/nilesh2797/ELIAS" ftarget="_blank">Code</a>] 
-    </div>
-
-    <div class="abstract hidden">
-    <p>
-Extreme multi-label classification (XMC) is a popular framework for solving many real-world problems that require accurate prediction from a very large number of potential output choices. A popular approach for dealing with the large label space is to arrange the labels into a shallow tree-based index and then learn an ML model to efficiently search this index via beam search. Existing methods initialize the tree index by clustering the label space into a few mutually exclusive clusters based on pre-defined features and keep it fixed throughout the training procedure. This approach results in a sub-optimal indexing structure over the label space and limits the search performance to the quality of choices made during the initialization of the index. In this paper, we propose a novel method ELIAS which relaxes the tree-based index to a specialized weighted graph-based index which is learned end-to-end with the final task objective. More specifically, ELIAS models the discrete cluster-to-label assignments in the existing tree-based index as soft learnable parameters that are learned jointly with the rest of the ML model. ELIAS achieves state-of-the-art performance on several large-scale extreme classification benchmarks with millions of labels. In particular, ELIAS can be up to 2.5% better at precision@1 and up to 4% better at recall@100 than existing XMC methods. A PyTorch implementation of ELIAS along with other resources is available at https://github.com/nilesh2797/ELIAS.
-</p>
-
-    </div>
-
-
-   </div> 
-  </div>
-  </li></ol>
-
-
-
-
-  <ol class="bibliography"><li><div class="row">
-  <div id="drone21" class="col-sm-10">
-      <div class="title">DRONE: Data-aware Low-rank Compression for Large NLP Models</div>
-      <div class="author">
-                <em>Patrick H. Chen</em>,  
-                Hsiang-fu Yu,
-                Inderjit S. Dhillon,
-                and Cho-jui, Hsieh
-      </div>
-      <div class="periodical">
-      
-        <em>In Advances in Neural Information Processing Systems</em>
-          
-        (<b>NeurIPS</b>),
-      
-        2021
-      </div>
+          <em>In Advances in Neural Information Processing Systems</em>
+            
+          (<b>NeurIPS</b>),
         
-    <div class="links">
-    
-      [<a class="abstract button" role="button">Abstract</a>]
-      [<a href="https://proceedings.neurips.cc/paper/2021/file/f56de5ef149cf0aedcc8f4797031e229-Paper.pdf" ftarget="_blank">PDF</a>]
-    
+          2022
+        </div>
+          
+      <div class="links">
+      
+        [<a class="abstract button" role="button">Abstract</a>]
+        [<a href="https://openreview.net/pdf?id=RF5Lb6NaZp" ftarget="_blank">PDF</a>]
+        [<a href="https://github.com/nilesh2797/ELIAS" ftarget="_blank">Code</a>] 
+      </div>
+  
+      <div class="abstract hidden">
+      <p>
+  Extreme multi-label classification (XMC) is a popular framework for solving many real-world problems that require accurate prediction from a very large number of potential output choices. A popular approach for dealing with the large label space is to arrange the labels into a shallow tree-based index and then learn an ML model to efficiently search this index via beam search. Existing methods initialize the tree index by clustering the label space into a few mutually exclusive clusters based on pre-defined features and keep it fixed throughout the training procedure. This approach results in a sub-optimal indexing structure over the label space and limits the search performance to the quality of choices made during the initialization of the index. In this paper, we propose a novel method ELIAS which relaxes the tree-based index to a specialized weighted graph-based index which is learned end-to-end with the final task objective. More specifically, ELIAS models the discrete cluster-to-label assignments in the existing tree-based index as soft learnable parameters that are learned jointly with the rest of the ML model. ELIAS achieves state-of-the-art performance on several large-scale extreme classification benchmarks with millions of labels. In particular, ELIAS can be up to 2.5% better at precision@1 and up to 4% better at recall@100 than existing XMC methods. A PyTorch implementation of ELIAS along with other resources is available at https://github.com/nilesh2797/ELIAS.
+  </p>
+  
+      </div>
+  
+  
+     </div> 
     </div>
-
-    <div class="abstract hidden">
-    <p>
-The representations learned by large-scale NLP models such as BERT have been
-widely used in various tasks. However, the increasing model size of the pre-trained
-models also brings efficiency challenges, including inference speed and model
-size when deploying models on mobile devices. Specifically, most operations
-in BERT consist of matrix multiplications. These matrices are not low-rank and
-thus canonical matrix decompositions do not lead to efficient approximations. In
-this paper, we observe that the learned representation of each layer lies in a low-dimensional space. Based on this observation, we propose DRONE (data-aware
-low-rank compression), a provably optimal low-rank decomposition of weight
-matrices, which has a simple closed form solution that can be efficiently computed.
-DRONE can be applied to both fully-connected and self-attention layers appearing
-in the BERT model. In addition to compressing standard models, our method
-can also be used on distilled BERT models to further improve the compression
-rate. Experimental results show that DRONE is able to improve both model size
-and inference speed with limited loss in accuracy. Specifically, DRONE alone
-achieves 1.92x speedup on the MRPC task with only 1.5% loss in accuracy, and
-when DRONE is combined with distillation, it further achieves over 12.3x speedup
-on various natural language inference tasks.
-</p>
-
-    </div>
-
-
-   </div> 
-  </div>
-  </li></ol>
-
-
-
+    </li></ol>
+  
 
   <ol class="bibliography"><li><div class="row">
+    <div id="drone21" class="col-sm-10">
+        <div class="title">DRONE: Data-aware Low-rank Compression for Large NLP Models</div>
+        <div class="author">
+                  <em>Patrick H. Chen</em>,  
+                  Hsiang-fu Yu,
+                  Inderjit S. Dhillon,
+                  and Cho-jui, Hsieh
+        </div>
+        <div class="periodical">
+        
+          <em>In Advances in Neural Information Processing Systems</em>
+            
+          (<b>NeurIPS</b>),
+        
+          2021
+        </div>
+          
+      <div class="links">
+      
+        [<a class="abstract button" role="button">Abstract</a>]
+        [<a href="https://proceedings.neurips.cc/paper/2021/file/f56de5ef149cf0aedcc8f4797031e229-Paper.pdf" ftarget="_blank">PDF</a>]
+      
+      </div>
+  
+      <div class="abstract hidden">
+      <p>
+  The representations learned by large-scale NLP models such as BERT have been
+  widely used in various tasks. However, the increasing model size of the pre-trained
+  models also brings efficiency challenges, including inference speed and model
+  size when deploying models on mobile devices. Specifically, most operations
+  in BERT consist of matrix multiplications. These matrices are not low-rank and
+  thus canonical matrix decompositions do not lead to efficient approximations. In
+  this paper, we observe that the learned representation of each layer lies in a low-dimensional space. Based on this observation, we propose DRONE (data-aware
+  low-rank compression), a provably optimal low-rank decomposition of weight
+  matrices, which has a simple closed form solution that can be efficiently computed.
+  DRONE can be applied to both fully-connected and self-attention layers appearing
+  in the BERT model. In addition to compressing standard models, our method
+  can also be used on distilled BERT models to further improve the compression
+  rate. Experimental results show that DRONE is able to improve both model size
+  and inference speed with limited loss in accuracy. Specifically, DRONE alone
+  achieves 1.92x speedup on the MRPC task with only 1.5% loss in accuracy, and
+  when DRONE is combined with distillation, it further achieves over 12.3x speedup
+  on various natural language inference tasks.
+  </p>
+  
+      </div>
+  
+  
+     </div> 
+    </div>
+    </li></ol>
+
+    
+  <ol class="bibliography"><li><div class="row">
+    <div id="mulcode19" class="col-sm-10">
+        <div class="title">MulCode: A Multiplicative Multi-way Model for Compressing Neural Language Model</div>
+        <div class="author">
+                  Yukun, Ma*
+                  <em>Patrick H. Chen*</em>,  
+                  and Cho-jui, Hsieh
+        </div>
+        <div class="periodical">
+        
+          <em>In Conference on Empirical Methods in Natural Language Processing</em>
+            
+          (<b>EMNLP</b>),
+        
+        
+          2019
+        </div>
+          
+      <div class="links">
+      
+        [<a class="abstract button" role="button">Abstract</a>]
+        [<a href="https://aclanthology.org/D19-1529.pdf" target="_blank">PDF</a>]
+        [<a href="https://github.com/mayktian/MulCode" target="_blank">Code</a>] 
+      </div>
+  
+      <div class="abstract hidden">
+      <p>
+  It is challenging to deploy deep neural nets on
+  memory-constrained devices due to the explosion of numbers of parameters. Especially, the
+  input embedding layer and Softmax layer usually dominate the memory usage in an RNNbased language model. For example, input
+  embedding and Softmax matrices in IWSLT2014 German-to-English data set account for
+  more than 80% of the total model parameters. To compress these embedding layers, we
+  propose MulCode, a novel multi-way multiplicative neural compressor. MulCode learns
+  an adaptively created matrix and its multiplicative compositions. Together with a prior
+  weighted loss, MulCode is more effective than
+  the state-of-the-art compression methods. On
+  the IWSLT-2014 machine translation data set,
+  MulCode achieved 17 times compression rate
+  for the embedding and Softmax matrices, and
+  when combined with quantization technique,
+  our method can achieve 41.38 times compression rate with very little loss in performance.
+  
+  </p>
+  
+      </div>
+  
+  
+     </div> 
+    </div>
+    </li></ol>
+
+
+
+
+
+<ol class="bibliography"><li><div class="row">
   <div id="canter20" class="col-sm-10">
       <div class="title">Clustering and Constructing User Coresets to Accelerate Large-scale Top-𝐾 Recommender Systems </div>
       <div class="author">
@@ -443,7 +641,7 @@ performance on downstream tasks.
 
 
 
-  <ol class="bibliography"><li><div class="row">
+<ol class="bibliography"><li><div class="row">
   <div id="screen19" class="col-sm-10">
       <div class="title">Learning to Screen for Fast Softmax Inference on Large Vocabulary Neural Networks</div>
       <div class="author">
@@ -494,121 +692,7 @@ et al., 2018) only achieves 6.7x speedup with 98.7% precision@1 and 98.1% precis
   </div>
   </li></ol>
 
-
-  <h2>Machine Learning Model Compression</h2>
-  <hr/>
-  <br/>
-
-
-  <ol class="bibliography"><li><div class="row">
-  <div id="drone21" class="col-sm-10">
-      <div class="title">DRONE: Data-aware Low-rank Compression for Large NLP Models</div>
-      <div class="author">
-                <em>Patrick H. Chen</em>,  
-                Hsiang-fu Yu,
-                Inderjit S. Dhillon,
-                and Cho-jui, Hsieh
-      </div>
-      <div class="periodical">
-      
-        <em>In Advances in Neural Information Processing Systems</em>
-          
-        (<b>NeurIPS</b>),
-      
-        2021
-      </div>
-        
-    <div class="links">
-    
-      [<a class="abstract button" role="button">Abstract</a>]
-      [<a href="https://proceedings.neurips.cc/paper/2021/file/f56de5ef149cf0aedcc8f4797031e229-Paper.pdf" ftarget="_blank">PDF</a>]
-    
-    </div>
-
-    <div class="abstract hidden">
-    <p>
-The representations learned by large-scale NLP models such as BERT have been
-widely used in various tasks. However, the increasing model size of the pre-trained
-models also brings efficiency challenges, including inference speed and model
-size when deploying models on mobile devices. Specifically, most operations
-in BERT consist of matrix multiplications. These matrices are not low-rank and
-thus canonical matrix decompositions do not lead to efficient approximations. In
-this paper, we observe that the learned representation of each layer lies in a low-dimensional space. Based on this observation, we propose DRONE (data-aware
-low-rank compression), a provably optimal low-rank decomposition of weight
-matrices, which has a simple closed form solution that can be efficiently computed.
-DRONE can be applied to both fully-connected and self-attention layers appearing
-in the BERT model. In addition to compressing standard models, our method
-can also be used on distilled BERT models to further improve the compression
-rate. Experimental results show that DRONE is able to improve both model size
-and inference speed with limited loss in accuracy. Specifically, DRONE alone
-achieves 1.92x speedup on the MRPC task with only 1.5% loss in accuracy, and
-when DRONE is combined with distillation, it further achieves over 12.3x speedup
-on various natural language inference tasks.
-</p>
-
-    </div>
-
-
-   </div> 
-  </div>
-  </li></ol>
-
-
-  <ol class="bibliography"><li><div class="row">
-  <div id="mulcode19" class="col-sm-10">
-      <div class="title">MulCode: A Multiplicative Multi-way Model for Compressing Neural Language Model</div>
-      <div class="author">
-                Yukun, Ma*
-                <em>Patrick H. Chen*</em>,  
-                and Cho-jui, Hsieh
-      </div>
-      <div class="periodical">
-      
-        <em>In Conference on Empirical Methods in Natural Language Processing</em>
-          
-        (<b>EMNLP</b>),
-      
-      
-        2019
-      </div>
-        
-    <div class="links">
-    
-      [<a class="abstract button" role="button">Abstract</a>]
-      [<a href="https://aclanthology.org/D19-1529.pdf" target="_blank">PDF</a>]
-      [<a href="https://github.com/mayktian/MulCode" target="_blank">Code</a>] 
-    </div>
-
-    <div class="abstract hidden">
-    <p>
-It is challenging to deploy deep neural nets on
-memory-constrained devices due to the explosion of numbers of parameters. Especially, the
-input embedding layer and Softmax layer usually dominate the memory usage in an RNNbased language model. For example, input
-embedding and Softmax matrices in IWSLT2014 German-to-English data set account for
-more than 80% of the total model parameters. To compress these embedding layers, we
-propose MulCode, a novel multi-way multiplicative neural compressor. MulCode learns
-an adaptively created matrix and its multiplicative compositions. Together with a prior
-weighted loss, MulCode is more effective than
-the state-of-the-art compression methods. On
-the IWSLT-2014 machine translation data set,
-MulCode achieved 17 times compression rate
-for the embedding and Softmax matrices, and
-when combined with quantization technique,
-our method can achieve 41.38 times compression rate with very little loss in performance.
-
-</p>
-
-    </div>
-
-
-   </div> 
-  </div>
-  </li></ol>
-<!--
-    
-  </div>
--->
-  <ol class="bibliography"><li><div class="row">
+<ol class="bibliography"><li><div class="row">
   <div id="groupreduce18" class="col-sm-10">
     
       <div class="title">GroupReduce: Block-Wise Low-Rank Approximation for Neural Language Model Shrinking</div>
@@ -663,139 +747,6 @@ softmax matrices, and when combined with quantization, our method can achieve
 26 times compression rate, which translates to a factor of 12.8 times compression
 for the entire model with very little degradation in perplexity.
 </p>
-
-    </div>
-    
-  </div>
-
-
-</div>
-</li></ol>
-
-
-
-
-  <h2>Fundamental Machine Learning </h2>
-  <hr/>
-  <br/>
-
-
-  <ol class="bibliography"><li><div class="row">
-  <div id="forgetting21" class="col-sm-10">
-    
-      <div class="title">Overcoming Catastrophic Forgetting by Bayesian Generative Regularization</div>
-      <div class="author">
-                <em>Patrick H. Chen</em>,  
-                Wei Wei,
-                Cho-jui, Hsieh,
-                and Bo Dai
-      </div>
-
-      <div class="periodical">
-      
-        <em>In Conference of Machine Learning</em>
-          
-        (<b>ICML</b>),
-      
-      
-        2021
-        
-      </div>
-    
-
-    <div class="links">
-    
-      [<a class="abstract button" role="button">Abstract</a>]
-      <!--[<a href="https://ieeexplore.ieee.org/iel7/4234/5534602/08624521.pdf" target="_blank">PDF</a>] -->
-    
-      [<a href="http://proceedings.mlr.press/v139/chen21v/chen21v.pdf" target="_blank">PDF</a>]
-      [<a href="https://github.com/Patrick-H-Chen/EBM-Forget" target=_blank">Code</a>]
-
-     <!-- [<a href="https://github.com/ryoungj/optdom" target="_blank">Code</a>] -->
-    </div>
-    
-    
-    
-    
-
-    <!-- Hidden abstract block -->
-    
-    <div class="abstract hidden">
-    <p>
-In this paper, we propose a new method to over-come catastrophic forgetting by adding generative regularization to Bayesian inference frame-work. Bayesian method provides a general frame-work for continual learning. We could further construct a generative regularization term for all given classification models by leveraging energy-based models and Langevin dynamic sampling to enrich the features learned in each task. By combining discriminative and generative loss together, we empirically show that the proposed method outperforms state-of-the-art methods on a variety of tasks, avoiding catastrophic forgetting in continual learning. In particular, the proposed method outperforms baseline methods over 15%on the Fashion-MNIST dataset and 10%on the CUB dataset.
-</p>
-
-
-
-    </div>
-    
-  </div>
-
-
-</div>
-</li></ol>
-
-
-
-
-
-  <ol class="bibliography"><li><div class="row">
-  <div id="signopt20" class="col-sm-10">
-    
-      <div class="title">Sign-OPT: A Query-Efficient Hard-label Adversarial Attack</div>
-      <div class="author">
-          Minhao Cheng*, Simranjit Singh*, <em> Patrick H. Chen </em>, Pin-Yu Chen, Sijia Liu and Cho-Jui Hsieh
-      </div>
-
-      <div class="periodical">
-      
-        <em>In International Conference on Learning Representations</em>
-          
-        (<b>ICLR</b>),
-      
-        2020
-        
-      </div>
-    
-
-    <div class="links">
-    
-      [<a class="abstract button" role="button">Abstract</a>]
-      <!--[<a href="https://ieeexplore.ieee.org/iel7/4234/5534602/08624521.pdf" target="_blank">PDF</a>] -->
-    
-      [<a href="https://arxiv.org/pdf/1909.10773.pdf" target="_blank">PDF</a>]
-
-     <!-- [<a href="https://github.com/ryoungj/optdom" target="_blank">Code</a>] -->
-    </div>
-    
-    
-    
-    
-
-    <!-- Hidden abstract block -->
-    
-    <div class="abstract hidden">
-    <p>
-We study the most practical problem setup for evaluating adversarial robustness
-of a machine learning system with limited access: the hard-label black-box attack setting for generating adversarial examples, where limited model queries
-are allowed and only the decision is provided to a queried data input. Several
-algorithms have been proposed for this problem but they typically require huge
-amount (>20,000) of queries for attacking one example. Among them, one of
-the state-of-the-art approaches (Cheng et al., 2019) showed that hard-label attack
-can be modeled as an optimization problem where the objective function can be
-evaluated by binary search with additional model queries, thereby a zeroth order optimization algorithm can be applied. In this paper, we adopt the same optimization
-formulation but propose to directly estimate the sign of gradient at any direction
-instead of the gradient itself, which enjoys the benefit of single query. Using
-this single query oracle for retrieving sign of directional derivative, we develop
-a novel query-efficient Sign-OPT approach for hard-label black-box attack. We
-provide a convergence analysis of the new algorithm and conduct experiments
-on several models on MNIST, CIFAR-10 and ImageNet. We find that Sign-OPT
-attack consistently requires 5× to 10× fewer queries when compared to the current
-state-of-the-art approaches, and usually converges to an adversarial example with
-smaller perturbation.
-</p>
-
-
 
     </div>
     
