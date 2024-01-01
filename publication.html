@@ -169,6 +169,58 @@
 
 
   <ol class="bibliography"><li><div class="row">
+    <div id="fast23" class="col-sm-10">
+      
+        <div class="title">Fast and Accurate Factual Inconsistency Detection Over Long Documents</div>
+        <div class="author">
+            Barrett M. Latiimer, <em> Patrick H. Chen </em>, Xinyuan Zhang, and Yi Yang
+        </div>
+  
+        <div class="periodical">
+        
+          <em>In Conference on Empirical Methods in Natural Language Processing</em>
+            
+          (<b>EMNLP</b>),
+        
+          2023
+          
+        </div>
+      
+  
+      <div class="links">
+      
+        [<a class="abstract button" role="button">Abstract</a>]
+        <!--[<a href="https://ieeexplore.ieee.org/iel7/4234/5534602/08624521.pdf" target="_blank">PDF</a>] -->
+      
+        [<a href="https://aclanthology.org/2023.emnlp-main.105.pdf" target="_blank">PDF</a>]
+        [<a href="https://github.com/asappresearch/scale-score" target="_blank">Code</a>]
+
+       <!-- [<a href="https://github.com/ryoungj/optdom" target="_blank">Code</a>] -->
+      </div>
+      
+      
+      
+      
+  
+      <!-- Hidden abstract block -->
+      
+      <div class="abstract hidden">
+      <p>
+        Generative AI models exhibit remarkable potential; however, hallucinations across various tasks present a significant challenge, particularly for longer inputs that current approaches struggle to address effectively. We introduce SCALE (Source Chunking Approach for Large-scale inconsistency Evaluation), a task-agnostic model for detecting factual inconsistencies using a novel chunking strategy. Specifically, SCALE is a Natural language inference (NLI) based model that uses large text chunks to condition over long texts. This approach achieves state-of-the-art performance in factual inconsistency detection for diverse tasks and long inputs. Additionally, we leverage the chunking mechanism and employ a novel algorithm to explain SCALE’s decisions through relevant source sentence retrieval. Our evaluations reveal that SCALE outperforms existing methods on both standard benchmarks and a new long-form dialogue dataset ScreenEval we constructed. Moreover, SCALE surpasses competitive systems in efficiency and model explanation evaluations. We have released our code and data publicly to GitHub1 .
+  </p>
+  
+  
+  
+      </div>
+      
+    </div>
+  
+  
+  </div>
+  </li></ol>
+  
+
+  <ol class="bibliography"><li><div class="row">
     <div id="signopt20" class="col-sm-10">
       
         <div class="title">Sign-OPT: A Query-Efficient Hard-label Adversarial Attack</div>
@@ -461,57 +513,6 @@ acceleration approaches and conventional libraries by 20% to 60% across differen
     </div>
     </li></ol>
 
-    
-  <ol class="bibliography"><li><div class="row">
-    <div id="mulcode19" class="col-sm-10">
-        <div class="title">MulCode: A Multiplicative Multi-way Model for Compressing Neural Language Model</div>
-        <div class="author">
-                  Yukun, Ma*
-                  <em>Patrick H. Chen*</em>,  
-                  and Cho-jui, Hsieh
-        </div>
-        <div class="periodical">
-        
-          <em>In Conference on Empirical Methods in Natural Language Processing</em>
-            
-          (<b>EMNLP</b>),
-        
-        
-          2019
-        </div>
-          
-      <div class="links">
-      
-        [<a class="abstract button" role="button">Abstract</a>]
-        [<a href="https://aclanthology.org/D19-1529.pdf" target="_blank">PDF</a>]
-        [<a href="https://github.com/mayktian/MulCode" target="_blank">Code</a>] 
-      </div>
-  
-      <div class="abstract hidden">
-      <p>
-  It is challenging to deploy deep neural nets on
-  memory-constrained devices due to the explosion of numbers of parameters. Especially, the
-  input embedding layer and Softmax layer usually dominate the memory usage in an RNNbased language model. For example, input
-  embedding and Softmax matrices in IWSLT2014 German-to-English data set account for
-  more than 80% of the total model parameters. To compress these embedding layers, we
-  propose MulCode, a novel multi-way multiplicative neural compressor. MulCode learns
-  an adaptively created matrix and its multiplicative compositions. Together with a prior
-  weighted loss, MulCode is more effective than
-  the state-of-the-art compression methods. On
-  the IWSLT-2014 machine translation data set,
-  MulCode achieved 17 times compression rate
-  for the embedding and Softmax matrices, and
-  when combined with quantization technique,
-  our method can achieve 41.38 times compression rate with very little loss in performance.
-  
-  </p>
-  
-      </div>
-  
-  
-     </div> 
-    </div>
-    </li></ol>
 
 
 
@@ -577,6 +578,59 @@ speedup with 99.0% precision@1.
    </div> 
   </div>
   </li></ol>
+
+
+      
+  <ol class="bibliography"><li><div class="row">
+    <div id="mulcode19" class="col-sm-10">
+        <div class="title">MulCode: A Multiplicative Multi-way Model for Compressing Neural Language Model</div>
+        <div class="author">
+                  Yukun, Ma*
+                  <em>Patrick H. Chen*</em>,  
+                  and Cho-jui, Hsieh
+        </div>
+        <div class="periodical">
+        
+          <em>In Conference on Empirical Methods in Natural Language Processing</em>
+            
+          (<b>EMNLP</b>),
+        
+        
+          2019
+        </div>
+          
+      <div class="links">
+      
+        [<a class="abstract button" role="button">Abstract</a>]
+        [<a href="https://aclanthology.org/D19-1529.pdf" target="_blank">PDF</a>]
+        [<a href="https://github.com/mayktian/MulCode" target="_blank">Code</a>] 
+      </div>
+  
+      <div class="abstract hidden">
+      <p>
+  It is challenging to deploy deep neural nets on
+  memory-constrained devices due to the explosion of numbers of parameters. Especially, the
+  input embedding layer and Softmax layer usually dominate the memory usage in an RNNbased language model. For example, input
+  embedding and Softmax matrices in IWSLT2014 German-to-English data set account for
+  more than 80% of the total model parameters. To compress these embedding layers, we
+  propose MulCode, a novel multi-way multiplicative neural compressor. MulCode learns
+  an adaptively created matrix and its multiplicative compositions. Together with a prior
+  weighted loss, MulCode is more effective than
+  the state-of-the-art compression methods. On
+  the IWSLT-2014 machine translation data set,
+  MulCode achieved 17 times compression rate
+  for the embedding and Softmax matrices, and
+  when combined with quantization technique,
+  our method can achieve 41.38 times compression rate with very little loss in performance.
+  
+  </p>
+  
+      </div>
+  
+  
+     </div> 
+    </div>
+    </li></ol>
 
 
   <ol class="bibliography"><li><div class="row">
